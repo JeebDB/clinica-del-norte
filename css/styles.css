@@ -1,4 +1,4 @@
-/* ---------- Variables ---------- */
+/*VARIABLES*/
 :root {
   --verde: #1f7a58;
   --verde-hover: #165f44;
@@ -8,7 +8,7 @@
   --texto: #1a1a1a;
 }
 
-/* ---------- Base y macro-estructura (Grid) ---------- */
+/* GRID */
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;   /* header | main | footer */
@@ -28,7 +28,7 @@ main {
 
 img { max-width: 100%; height: auto; display: block; }
 
-/* ---------- Botón (base de Bootstrap con colores propios) ---------- */
+/*BOTON*/
 .btn-clinica {
   --bs-btn-color: #fff;
   --bs-btn-bg: var(--verde);
@@ -40,7 +40,7 @@ img { max-width: 100%; height: auto; display: block; }
   --bs-btn-active-border-color: var(--verde-hover);
 }
 
-/* ---------- Header y menú ---------- */
+/* HEADER Y MENU */
 .site-header { background: var(--gris-header); }
 
 .site-header .navbar {
@@ -53,7 +53,7 @@ img { max-width: 100%; height: auto; display: block; }
 .site-header .nav-link { color: var(--texto); font-weight: 600; }
 .site-header .nav-link.active { text-decoration: underline; }
 
-/* ---------- Hero ---------- */
+/* HERO */
 .hero { display: grid; gap: 1.5rem; align-items: center; }
 .hero-imagen { order: -1; }                 /* en móvil la imagen va arriba */
 .hero-imagen img {
@@ -65,7 +65,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .hero h1 { font-size: 1.75rem; font-weight: 700; }
 
-/* ---------- Servicios ---------- */
+/* SERVICIOS */
 .servicios h2,
 .sobre-nosotros h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
 
@@ -75,7 +75,7 @@ img { max-width: 100%; height: auto; display: block; }
   gap: 1rem;
 }
 
-.tarjeta {                                  /* Flexbox dentro de la tarjeta */
+.tarjeta {                              
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -89,7 +89,7 @@ img { max-width: 100%; height: auto; display: block; }
 .tarjeta p { margin: 0; }
 .tarjeta .btn { align-self: flex-start; margin-top: auto; }
 
-/* ---------- Sobre nosotros ---------- */
+/* SOBRE NOSOTROS */
 .sobre-nosotros { display: grid; gap: 1.5rem; align-items: center; }
 .sobre-nosotros img {
   width: 100%;
@@ -99,9 +99,9 @@ img { max-width: 100%; height: auto; display: block; }
   background: var(--gris-tarjeta);
 }
 
-/* ---------- Horario (aside) ---------- */
+/* HORARIO */
 .horario {
-  display: flex;                            /* Flexbox */
+  display: flex;                            
   align-items: center;
   gap: 1rem;
   padding: 1rem 1.25rem;
@@ -113,7 +113,7 @@ img { max-width: 100%; height: auto; display: block; }
 .horario h2 { font-size: 1.1rem; font-weight: 700; margin: 0; }
 .horario p { margin: 0; }
 
-/* ---------- Footer ---------- */
+/* FOOTER */
 .site-footer {
   display: grid;
   grid-template-columns: 1fr;
@@ -129,7 +129,7 @@ img { max-width: 100%; height: auto; display: block; }
 .pie-redes { display: flex; flex-wrap: wrap; gap: 1rem; list-style: none; padding: 0; margin: 0; }
 .pie-redes .bi { font-size: 1.4rem; }
 
-/* ---------- TABLET (desde 768px) ---------- */
+/*TABLETS*/
 @media (min-width: 768px) {
   main { padding: 2rem; gap: 3rem; }
   .hero h1 { font-size: 2.25rem; }
@@ -138,7 +138,7 @@ img { max-width: 100%; height: auto; display: block; }
   .site-footer { grid-template-columns: 1fr 1fr; padding: 2rem; }
 }
 
-/* ---------- ESCRITORIO (desde 1024px) ---------- */
+/*ESCRITORIOS*/
 @media (min-width: 1024px) {
   .hero { grid-template-columns: 1fr 1fr; }
   .hero-imagen { order: 0; }                /* en escritorio la imagen va a la derecha */
