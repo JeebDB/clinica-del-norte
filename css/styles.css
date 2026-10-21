@@ -89,7 +89,7 @@ img { max-width: 100%; height: auto; display: block; }
 .tarjeta p { margin: 0; }
 .tarjeta .btn { align-self: flex-start; margin-top: auto; }
 
-/* SOBRE NOSOTROS */
+/* SOBRE NOSOTROS PAGINA */
 .sobre-nosotros { display: grid; gap: 1.5rem; align-items: center; }
 .sobre-nosotros img {
   width: 100%;
@@ -144,4 +144,101 @@ img { max-width: 100%; height: auto; display: block; }
   .hero-imagen { order: 0; }                /* en escritorio la imagen va a la derecha */
   .servicios-lista { grid-template-columns: repeat(3, 1fr); }
   .site-footer { grid-template-columns: 2fr 1fr 1fr; }
+}
+
+/* NOSOTROS PAGINA */
+.titulo-pagina { font-size: 1.75rem; font-weight: 700; }
+
+/* Historia (Grid) */
+.historia { display: grid; gap: 1.5rem; align-items: center; }
+.historia img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  background: var(--gris-tarjeta);
+}
+.historia h2,
+.equipo h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
+
+/* Misión, visión y valores (Grid) */
+.valores { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.valores article {
+  padding: 1.25rem;
+  background: var(--gris-tarjeta);
+  border-left: 6px solid var(--verde);
+  border-radius: 0.5rem;
+}
+.valores h2 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; }
+.valores .bi { color: var(--verde-oscuro); }
+.valores p { margin: 0; }
+
+/* EQUIPO DOCTORES */
+.equipo-lista { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.medico {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--gris-tarjeta);
+  border: 2px solid var(--texto);
+  border-radius: 0.5rem;
+}
+.medico img {
+  flex-shrink: 0;
+  width: 96px;
+  height: 128px;
+  object-fit: cover;
+  border-radius: 0.25rem;
+  background: #fff;
+}
+.medico h3 { font-size: 1.05rem; font-weight: 700; margin: 0 0 0.25rem; }
+.medico p { margin: 0; }
+
+/* TABLET*/
+@media (min-width: 768px) {
+  .titulo-pagina { font-size: 2.25rem; }
+  .historia { grid-template-columns: 1fr 1fr; }
+  .valores { grid-template-columns: repeat(3, 1fr); }
+  .equipo-lista { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ESCRITORIO*/
+@media (min-width: 1024px) {
+  .equipo-lista { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* P.SERVICIOS */
+
+/* C.SERVICIOS */
+.catalogo {
+  display: grid;
+  grid-template-columns: 1fr;               /* TELF: 1 columna */
+  gap: 1rem;
+}
+
+/* SE AGREGA IMAGEN AQUI RECORDAR */
+.tarjeta-servicio figure { margin: 0; }
+.tarjeta-servicio img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.25rem;
+  background: #fff;
+}
+.tarjeta-servicio h2 { font-size: 1.15rem; font-weight: 700; margin: 0; }
+
+/*TABLET*/
+@media (min-width: 768px) {
+  .catalogo { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ESCRITORIO*/
+@media (min-width: 1024px) {
+  .catalogo {
+    gap: 1.5rem;
+    max-width: 900px;                       
+    margin-inline: auto;
+  }
+  .titulo-pagina { text-align: center; }
 }

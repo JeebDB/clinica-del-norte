@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica del Norte | Nosotros</title>
+  <meta name="description" content="Conoce la historia, la misión, la visión y el equipo médico de la Clínica del Norte.">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <a class="visually-hidden-focusable" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <nav class="navbar navbar-expand-md" aria-label="Navegación principal">
+      <a class="navbar-brand marca" href="index.html">
+        <svg class="logo" width="40" height="40" viewBox="0 0 40 40" role="img" aria-label="Logo de Clínica del Norte">
+          <rect width="40" height="40" rx="6" fill="#1f7a58"/>
+          <path d="M17 9h6v8h8v6h-8v8h-6v-8H9v-6h8z" fill="#fff"/>
+        </svg>
+        <span>Clínica del Norte</span>
+      </a>
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#menu"
+              aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="btn btn-clinica" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <h1 class="titulo-pagina">¿Quiénes somos?</h1>
+
+    <!-- HISTORIA -->
+    <section class="historia" aria-labelledby="titulo-historia">
+      <figure>
+        <picture>
+          <source srcset="img/instalaciones.webp" type="image/webp">
+          <img src="img/instalaciones.jpg" alt="PLACEHOLDER: Clínica del Norte" width="600" height="400">
+        </picture>
+      </figure>
+      <div class="historia-texto">
+        <h2 id="titulo-historia">Nuestra historia</h2>
+        <p>La Clínica del Norte nació hace más de 10 años con el propósito de ofrecer atención médica general cercana, oportuna y de confianza para las familias de la comunidad.</p>
+        <p>Desde entonces hemos crecido de la mano de nuestros pacientes, manteniendo un trato humano y un servicio de calidad en cada consulta.</p>
+      </div>
+    </section>
+
+    <!-- MISIÓN, VISIÓN Y VALORES -->
+    <section class="valores" aria-label="Misión, visión y valores">
+      <article>
+        <h2><i class="bi bi-bullseye" aria-hidden="true"></i> Misión</h2>
+        <p>Brindar atención médica primaria de calidad, con trato humano y accesible para toda la comunidad.</p>
+      </article>
+      <article>
+        <h2><i class="bi bi-eye" aria-hidden="true"></i> Visión</h2>
+        <p>Ser la clínica de referencia en medicina general de la región por nuestra confianza y calidez.</p>
+      </article>
+      <article>
+        <h2><i class="bi bi-heart" aria-hidden="true"></i> Valores</h2>
+        <p>Respeto, empatía, responsabilidad y compromiso con la salud de cada paciente.</p>
+      </article>
+    </section>
+
+    <!-- EQUIPO -->
+    <section class="equipo" aria-labelledby="titulo-equipo">
+      <h2 id="titulo-equipo">Nuestro equipo médico</h2>
+      <div class="equipo-lista">
+        <article class="medico">
+          <img src="img/medico1.jpg" alt="PLACEHOLDER: Foto Dr. Uno" width="96" height="128" loading="lazy">
+          <div>
+            <h3>Dr(a). John Doe</h3>
+            <p>Medicina general. Atención primaria y control de enfermedades crónicas.</p>
+          </div>
+        </article>
+
+        <article class="medico">
+          <img src="img/medico2.jpg" alt="PLACEHOLDER: Foto Dr. Dos" width="96" height="128" loading="lazy">
+          <div>
+            <h3>Dr(a). Jane Doe</h3>
+            <p>Medicina general. Consulta externa y expedición de certificados médicos.</p>
+          </div>
+        </article>
+
+        <article class="medico">
+          <img src="img/medico3.jpg" alt="PLACEHOLDER: Foto Dr. Tres" width="96" height="128" loading="lazy">
+          <div>
+            <h3>Dr(a). John Doe</h3>
+            <p>Medicina general. Seguimiento de pacientes y exámenes básicos.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <section aria-labelledby="pie-clinica">
+      <h2 id="pie-clinica">Clínica del Norte</h2>
+      <address>
+        Dirección: XXXXXXXXXXX<br>
+        Teléfono: +57 XXXXXXXX<br>
+        Email: <a href="mailto:XXXXXXX@gmail.com">XXXXXXX@gmail.com</a>
+      </address>
+    </section>
+
+    <nav aria-label="Enlaces del pie de página">
+      <ul class="pie-enlaces">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <section aria-labelledby="pie-redes">
+      <h2 id="pie-redes">Síguenos</h2>
+      <ul class="pie-redes">
+        <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a></li>
+      </ul>
+      <p><small>&copy; 2026 Clínica del Norte · Horarios de atención</small></p>
+    </section>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

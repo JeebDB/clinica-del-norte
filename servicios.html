@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica del Norte | Servicios</title>
+  <meta name="description" content="Servicios médicos de la Clínica del Norte: medicina general, control de enfermedades crónicas, exámenes básicos y certificados médicos.">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <a class="visually-hidden-focusable" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <nav class="navbar navbar-expand-md" aria-label="Navegación principal">
+      <a class="navbar-brand marca" href="index.html">
+        <svg class="logo" width="40" height="40" viewBox="0 0 40 40" role="img" aria-label="Logo de Clínica del Norte">
+          <rect width="40" height="40" rx="6" fill="#1f7a58"/>
+          <path d="M17 9h6v8h8v6h-8v8h-6v-8H9v-6h8z" fill="#fff"/>
+        </svg>
+        <span>Clínica del Norte</span>
+      </a>
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#menu"
+              aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="btn btn-clinica" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <h1 class="titulo-pagina">Nuestros servicios médicos</h1>
+
+    <section class="catalogo" aria-label="Listado de servicios médicos">
+
+      <article class="tarjeta tarjeta-servicio">
+        <figure>
+          <img src="img/servicio-medicina-general.jpg" alt="PLACEHOLDER N1" width="600" height="338" loading="lazy">
+        </figure>
+        <h2>Medicina general</h2>
+        <p>Consulta de atención primaria para ti y tu familia, con valoración, diagnóstico y orientación médica.</p>
+        <a class="btn btn-clinica" href="detalle-servicio.html">Ver más</a>
+      </article>
+
+      <article class="tarjeta tarjeta-servicio">
+        <figure>
+          <img src="img/servicio-cronicas.jpg" alt="PLACEHOLDER N2" width="600" height="338" loading="lazy">
+        </figure>
+        <h2>Control de enfermedades crónicas</h2>
+        <p>Seguimiento periódico para mantener tu salud estable y prevenir complicaciones.</p>
+        <a class="btn btn-clinica" href="detalle-servicio.html">Ver más</a>
+      </article>
+
+      <article class="tarjeta tarjeta-servicio">
+        <figure>
+          <img src="img/servicio-examenes.jpg" alt="PLACEHOLDER N3" width="600" height="338" loading="lazy">
+        </figure>
+        <h2>Exámenes básicos</h2>
+        <p>Toma de exámenes de rutina en nuestras instalaciones, de forma rápida y segura.</p>
+        <a class="btn btn-clinica" href="detalle-servicio.html">Ver más</a>
+      </article>
+
+      <article class="tarjeta tarjeta-servicio">
+        <figure>
+          <img src="img/servicio-certificados.jpg" alt="PLACEHOLDER N4" width="600" height="338" loading="lazy">
+        </figure>
+        <h2>Certificados médicos</h2>
+        <p>Expedición de certificados médicos para trabajo, estudio y otros trámites.</p>
+        <a class="btn btn-clinica" href="detalle-servicio.html">Ver más</a>
+      </article>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <section aria-labelledby="pie-clinica">
+      <h2 id="pie-clinica">Clínica del Norte</h2>
+      <address>
+        Dirección: XXXXXXXXXXX<br>
+        Teléfono: +57 XXXXXXXX<br>
+        Email: <a href="mailto:XXXXXXX@gmail.com">XXXXXXX@gmail.com</a>
+      </address>
+    </section>
+
+    <nav aria-label="Enlaces del pie de página">
+      <ul class="pie-enlaces">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <section aria-labelledby="pie-redes">
+      <h2 id="pie-redes">Síguenos</h2>
+      <ul class="pie-redes">
+        <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a></li>
+      </ul>
+      <p><small>&copy; 2026 Clínica del Norte · Horarios de atención</small></p>
+    </section>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
