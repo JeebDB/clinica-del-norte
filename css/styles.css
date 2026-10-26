@@ -242,3 +242,76 @@ img { max-width: 100%; height: auto; display: block; }
   }
   .titulo-pagina { text-align: center; }
 }
+
+/* P.CONTACTO */
+
+/* GRID (DISTRIBUCION PRINCIPAL) */
+.contacto {
+  display: grid;
+  grid-template-columns: 1fr;               /* TEL: FORMULARIO*/
+  gap: 1.5rem;
+}
+
+/* FORMULARIO */
+.formulario {
+  padding: 1.25rem;
+  background: #fff;
+  border: 2px solid var(--texto);
+  border-radius: 0.5rem;
+}
+.nota-form { font-size: 0.875rem; margin-bottom: 1rem; }
+
+.formulario form { display: grid; gap: 1rem; }   /* Grid entre campos */
+
+.campo { display: flex; flex-direction: column; gap: 0.25rem; }   /* Flexbox por campo */
+.campo label { font-weight: 600; }
+.campo input,
+.campo textarea {
+  padding: 0.6rem 0.75rem;
+  font: inherit;
+  border: 2px solid var(--texto);
+  border-radius: 0.25rem;
+  background: #fff;
+}
+.campo textarea { resize: vertical; }
+.campo input:focus,
+.campo textarea:focus {
+  outline: 3px solid var(--verde);
+  outline-offset: 1px;
+}
+/* ERRORES EN LOS CAMPOS */
+.campo input:user-invalid,
+.campo textarea:user-invalid { border-color: #b3261e; }
+
+.acciones-form { display: flex; flex-wrap: wrap; gap: 0.75rem; }   /* Flexbox */
+
+/* MAPA E INFORMACION (aside) */
+.info-contacto { display: grid; gap: 1rem; align-content: start; }
+.info-contacto img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  background: var(--gris-tarjeta);
+}
+.datos {
+  padding: 1.25rem;
+  background: var(--gris-tarjeta);
+  border-left: 6px solid var(--verde);
+  border-radius: 0.5rem;
+}
+.datos h2 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.75rem; }
+.datos ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.6rem; }
+.datos li { display: flex; align-items: flex-start; gap: 0.6rem; }   /* Flexbox */
+.datos .bi { color: var(--verde-oscuro); font-size: 1.2rem; }
+
+/* TABLET (desde 768px) */
+@media (min-width: 768px) {
+  .contacto { grid-template-columns: 1fr 1fr; align-items: start; }
+}
+
+/* ESCRITORIO (desde 1024px) */
+@media (min-width: 1024px) {
+  .contacto { gap: 2.5rem; }
+  .formulario { padding: 1.75rem; }
+}
