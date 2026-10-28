@@ -315,3 +315,64 @@ img { max-width: 100%; height: auto; display: block; }
   .contacto { gap: 2.5rem; }
   .formulario { padding: 1.75rem; }
 }
+
+/* PAGINA DETALLES DEL SERVICIO */
+
+/* Imagen y texto (Grid) */
+.detalle { display: grid; gap: 1.5rem; align-items: start; }
+.detalle figure { margin: 0; }
+.detalle img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  background: var(--gris-tarjeta);
+}
+.detalle-texto h1 { font-size: 1.75rem; font-weight: 700; margin-bottom: 0.75rem; }
+
+/* FLBX */
+.ficha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
+.ficha li { display: flex; align-items: center; gap: 0.4rem; }
+.ficha .bi { color: var(--verde-oscuro); }
+
+/* Servicios relacionados (Grid + Flexbox en la tarjeta) */
+.relacionados h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
+.relacionados-lista { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.relacionado {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--gris-tarjeta);
+  border: 2px solid var(--texto);
+  border-radius: 0.5rem;
+}
+.relacionado img {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 0.25rem;
+  background: #fff;
+}
+.relacionado h3 { font-size: 1rem; font-weight: 700; margin: 0 0 0.5rem; }
+
+/* TABLET */
+@media (min-width: 768px) {
+  .detalle { grid-template-columns: 1fr 1fr; }
+  .detalle-texto h1 { font-size: 2.25rem; }
+  .relacionados-lista { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ESCRITORIO (desde 1024px) */
+@media (min-width: 1024px) {
+  .relacionados-lista { grid-template-columns: repeat(3, 1fr); }
+}
