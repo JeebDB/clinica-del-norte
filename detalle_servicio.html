@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clínica del Norte | Medicina general</title>
-  <meta name="description" content="Medicina general en la Clínica del Norte: consulta de atención primaria presencial de 30 minutos para ti y tu familia.">
+  <title>Clínica del Norte | Detalle del servicio</title>
+  <meta name="description" content="Conoce el detalle de los servicios médicos de la Clínica del Norte: duración, modalidad y en qué consiste cada atención.">
 
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,54 +47,11 @@
 
   <main id="contenido">
 
-    <!-- DETALLE DEL SERVICIO -->
-    <article class="detalle" aria-labelledby="titulo-servicio">
-      <figure>
-        <img src="img/servicio-medicina-general.jpg" alt="PLACEHOLDER: consulta de medicina general" width="600" height="450">
-      </figure>
+    <article class="detalle" id="detalle" aria-labelledby="titulo-servicio"></article>
 
-      <div class="detalle-texto">
-        <h1 id="titulo-servicio">Medicina general</h1>
-
-        <ul class="ficha">
-          <li><i class="bi bi-clock" aria-hidden="true"></i><span>Duración: 30 minutos</span></li>
-          <li><i class="bi bi-hospital" aria-hidden="true"></i><span>Modalidad: Presencial</span></li>
-        </ul>
-
-        <p>La consulta de medicina general es la puerta de entrada a tu atención de salud. Un médico valora tu estado general, revisa tus síntomas y te orienta sobre el diagnóstico y el tratamiento que necesitas.</p>
-        <p>Es una consulta pensada para ti y tu familia, con tiempo suficiente para resolver tus dudas. Si tu caso lo requiere, te indicamos los siguientes pasos o los exámenes de apoyo necesarios.</p>
-      </div>
-    </article>
-
-    <!-- SERVICIOS RELACIONADOS -->
-    <aside class="relacionados" aria-labelledby="titulo-relacionados">
+    <aside class="relacionados" id="relacionados" aria-labelledby="titulo-relacionados" hidden>
       <h2 id="titulo-relacionados">Servicios relacionados</h2>
-
-      <div class="relacionados-lista">
-        <article class="relacionado">
-          <img src="img/servicio-cronicas.jpg" alt="" width="80" height="80" loading="lazy">
-          <div>
-            <h3>Control de enfermedades crónicas</h3>
-            <a class="btn btn-clinica btn-sm" href="detalle_servicio.html">Ver más</a>
-          </div>
-        </article>
-
-        <article class="relacionado">
-          <img src="img/servicio-examenes.jpg" alt="" width="80" height="80" loading="lazy">
-          <div>
-            <h3>Exámenes básicos</h3>
-            <a class="btn btn-clinica btn-sm" href="detalle_servicio.html">Ver más</a>
-          </div>
-        </article>
-
-        <article class="relacionado">
-          <img src="img/servicio-certificados.jpg" alt="" width="80" height="80" loading="lazy">
-          <div>
-            <h3>Certificados médicos</h3>
-            <a class="btn btn-clinica btn-sm" href="detalle_servicio.html">Ver más</a>
-          </div>
-        </article>
-      </div>
+      <div class="relacionados-lista" id="relacionados-lista"></div>
     </aside>
 
   </main>
@@ -129,5 +87,6 @@
   </footer>
 
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="js/detalle_servicio.js"></script>
 </body>
 </html>
