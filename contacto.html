@@ -6,6 +6,7 @@
   <title>Clínica del Norte | Contacto</title>
   <meta name="description" content="Contáctanos: escribe a la Clínica del Norte para consultas, información de servicios o solicitar una cita. Horario de lunes a viernes.">
 
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,8 +56,7 @@
         <h2 id="titulo-form" class="visually-hidden">Formulario de contacto</h2>
         <p class="nota-form">Los campos marcados con <span aria-hidden="true">*</span><span class="visually-hidden">asterisco</span> son obligatorios.</p>
 
-        <!-- AQUI VA EL FORMSPREE-->
-        <form action="#" method="POST">
+        <form id="form-contacto" action="#" method="POST" novalidate>
 
           <div class="campo">
             <label for="nombre">Nombre completo *</label>
@@ -83,8 +83,9 @@
 
           <div class="campo">
             <label for="fecha">Fecha preferida para la cita (opcional)</label>
+            <!-- El min y el max los reemplaza contacto.js por "hoy" y "hoy + 90 días" -->
             <input type="date" id="fecha" name="fecha_preferida"
-                   min="2026-10-27" max="2026-12-31">
+                   min="2026-11-15" max="2027-02-13">
           </div>
 
           <div class="campo">
@@ -99,20 +100,24 @@
             <textarea id="mensaje" name="mensaje" rows="5"
                       required minlength="10" maxlength="500"
                       placeholder="Cuéntanos cómo podemos ayudarte"></textarea>
+            <p class="contador-caracteres" id="contador-mensaje">0 / 500</p>
           </div>
+
+          <div id="aviso-form" role="status"></div>
 
           <div class="acciones-form">
             <button class="btn btn-clinica" type="submit">Enviar</button>
             <button class="btn btn-outline-secondary" type="reset">Limpiar</button>
+            <button class="btn btn-outline-secondary" type="button" id="cancelar-edicion" hidden>Cancelar edición</button>
           </div>
 
         </form>
       </section>
 
-      <!-- MAPA E INFORMACION -->
+      <!-- MAPA E INFORMACIÓN -->
       <aside class="info-contacto" aria-labelledby="titulo-info">
         <figure>
-          <img src="img/mapa.jpg" alt="MAPA: Placeholder" width="600" height="400" loading="lazy">
+          <img src="img/mapa.jpg" alt="MAPA PLACEHOLDER" width="600" height="400" loading="lazy">
         </figure>
 
         <div class="datos">
@@ -127,6 +132,16 @@
       </aside>
 
     </div>
+
+    <!-- SOLICITUDES GUARDADAS-->
+    <section class="solicitudes" aria-labelledby="titulo-solicitudes">
+      <div class="solicitudes-cabecera">
+        <h2 id="titulo-solicitudes">Mis solicitudes guardadas</h2>
+        <button type="button" class="btn btn-outline-danger btn-sm" id="vaciar" hidden>Borrar todas</button>
+      </div>
+      <p class="nota-form">Estas solicitudes se guardan solo en este navegador.</p>
+      <ul id="lista-solicitudes" class="lista-solicitudes"></ul>
+    </section>
 
   </main>
 
@@ -161,5 +176,6 @@
   </footer>
 
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="js/contacto.js"></script>
 </body>
 </html>
