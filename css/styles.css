@@ -285,7 +285,6 @@ img { max-width: 100%; height: auto; display: block; }
 
 .acciones-form { display: flex; flex-wrap: wrap; gap: 0.75rem; }   /* Flexbox */
 
-/* MAPA E INFORMACION (aside) */
 .info-contacto { display: grid; gap: 1rem; align-content: start; }
 .info-contacto img {
   width: 100%;
@@ -305,20 +304,15 @@ img { max-width: 100%; height: auto; display: block; }
 .datos li { display: flex; align-items: flex-start; gap: 0.6rem; }   /* Flexbox */
 .datos .bi { color: var(--verde-oscuro); font-size: 1.2rem; }
 
-/* TABLET (desde 768px) */
 @media (min-width: 768px) {
   .contacto { grid-template-columns: 1fr 1fr; align-items: start; }
 }
 
-/* ESCRITORIO (desde 1024px) */
 @media (min-width: 1024px) {
   .contacto { gap: 2.5rem; }
   .formulario { padding: 1.75rem; }
 }
 
-/* PAGINA DETALLES DEL SERVICIO */
-
-/* Imagen y texto (Grid) */
 .detalle { display: grid; gap: 1.5rem; align-items: start; }
 .detalle figure { margin: 0; }
 .detalle img {
@@ -330,7 +324,6 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .detalle-texto h1 { font-size: 1.75rem; font-weight: 700; margin-bottom: 0.75rem; }
 
-/* FLBX */
 .ficha {
   display: flex;
   flex-wrap: wrap;
@@ -343,7 +336,6 @@ img { max-width: 100%; height: auto; display: block; }
 .ficha li { display: flex; align-items: center; gap: 0.4rem; }
 .ficha .bi { color: var(--verde-oscuro); }
 
-/* Servicios relacionados (Grid + Flexbox en la tarjeta) */
 .relacionados h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
 .relacionados-lista { display: grid; grid-template-columns: 1fr; gap: 1rem; }
 .relacionado {
@@ -365,14 +357,69 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .relacionado h3 { font-size: 1rem; font-weight: 700; margin: 0 0 0.5rem; }
 
-/* TABLET */
 @media (min-width: 768px) {
   .detalle { grid-template-columns: 1fr 1fr; }
   .detalle-texto h1 { font-size: 2.25rem; }
   .relacionados-lista { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* ESCRITORIO (desde 1024px) */
 @media (min-width: 1024px) {
   .relacionados-lista { grid-template-columns: repeat(3, 1fr); }
+}
+
+.estado {
+  grid-column: 1 / -1;         
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+.estado p { margin: 0; }
+
+.barra-filtros { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.campo select {
+  padding: 0.6rem 0.75rem;
+  font: inherit;
+  border: 2px solid var(--texto);
+  border-radius: 0.25rem;
+  background: #fff;
+}
+.campo select:focus { outline: 3px solid var(--verde); outline-offset: 1px; }
+.contador { margin: 0; font-weight: 600; }
+
+.error-campo { min-height: 1.25rem; margin: 0; font-size: 0.875rem; font-weight: 600; color: #b3261e; }
+.campo-error input,
+.campo-error textarea { border-color: #b3261e; background: #fdecea; }
+.campo-ok input,
+.campo-ok textarea { border-color: var(--verde); }
+.contador-caracteres { align-self: flex-end; margin: 0; font-size: 0.8rem; color: #444; }
+
+.solicitudes-cabecera { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; }
+.solicitudes h2 { font-size: 1.5rem; font-weight: 700; margin: 0; }
+.lista-solicitudes { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.solicitud {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--gris-tarjeta);
+  border-left: 6px solid var(--verde);
+  border-radius: 0.5rem;
+}
+.solicitud h3 { font-size: 1.05rem; font-weight: 700; margin: 0 0 0.25rem; }
+.solicitud p { margin: 0 0 0.25rem; overflow-wrap: anywhere; }
+.solicitud-meta { font-size: 0.85rem; }
+.solicitud-acciones { display: flex; gap: 0.5rem; }
+.solicitud-vacia { grid-column: 1 / -1; padding: 1rem; background: var(--gris-tarjeta); border-radius: 0.5rem; }
+
+/* TABLET (desde 768px) */
+@media (min-width: 768px) {
+  .barra-filtros { grid-template-columns: 2fr 1fr; align-items: end; }
+  .lista-solicitudes { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .lista-solicitudes { grid-template-columns: repeat(3, 1fr); }
 }
